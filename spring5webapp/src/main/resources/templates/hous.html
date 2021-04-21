@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+
+    <title>Springboot</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Real Estate</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a th:href="@{Beginning}" class="nav-link active"  >Home</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{customs}" class="nav-link active"  >Customers</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{index}" class="nav-link" >Agents</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{lans}"  class="nav-link" >Lands</a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{hous}" class="nav-link" >Houses</a>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<table class="table table-striped table-bordered table-hover">
+    <thead class="thead-dark">
+    <tr>
+        <th>Id</th>
+        <th>Location</th>
+        <th>Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr  th:each="house : ${houses}">
+        <td th:text="${house.id}">002</td>
+        <td th:text="${house.Location}">Lagos</td>
+        <td th:text="${house.Name}">Oxlade</td>
+
+    </tr>
+    <tr  th:each="house : ${houses}">
+        <td th:text="${house.id}">004</td>
+        <td th:text="${house.Location}">London </td>
+        <td th:text="${house.Name}">Majesty Homes</td>
+
+    </tr>
+    <tr  th:each="house : ${houses}">
+        <td th:text="${house.id}">005</td>
+        <td th:text="${house.Location}">America </td>
+        <td th:text="${house.Name}">Adron homes</td>
+
+    </tr>
+    <tr  th:each="house : ${houses}">
+        <td th:text="${house.id}">004</td>
+        <td th:text="${house.Location}">London </td>
+        <td th:text="${house.Name}">Majesty Homes</td>
+        </tr>
+
+    </tr>
+    <tr  th:each="house : ${houses}">
+        <td th:text="${house.id}">006</td>
+        <td th:text="${house.Location}">Uyo </td>
+        <td th:text="${house.Name}">Revolutions</td>
+
+    </tr>
+    </tbody>
+
+
+
+
+
+</table>
+<h1>Dear Admin,This is a list of our houses</h1>
+<table class="table table-striped table-bordered table-hover">
+    <thead class="thead-dark">
+    <tr>
+        <th>Id</th>
+        <th>Location</th>
+        <th>Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <td >001</td>
+    <td >Lagos</td>
+    <td >Valleyview</td>
+
+
+    <tr  >
+        <td >002</td>
+        <td >Lagos</td>
+        <td >Oxlade</td>
+
+    </tr>
+    <tr  >
+        <td >004</td>
+        <td >London </td>
+        <td >Majesty Homes</td>
+
+    </tr>
+    <tr >
+        <td >005</td>
+        <td >America </td>
+        <td >Adron homes</td>
+
+    </tr>
+    <tr  >
+        <td >004</td>
+        <td >London </td>
+        <td >Majesty Homes</td>
+    </tr>
+
+    </tr>
+    <tr  >
+        <td>006</td>
+        <td >Uyo </td>
+        <td >Revolutions</td>
+
+    </tr>
+    </tbody>
+
+
+
+
+
+</table>
+
+
+</body>
+</html>
